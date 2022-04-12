@@ -2,7 +2,6 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app" />
@@ -23,10 +22,10 @@
                 <a href="#" class="navbar-brand">LarsonBro</a>
 
                 <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
-            <span class="menu-icon-bar"></span>
-            <span class="menu-icon-bar"></span>
-            <span class="menu-icon-bar"></span>
-          </button>
+          <span class="menu-icon-bar"></span>
+          <span class="menu-icon-bar"></span>
+          <span class="menu-icon-bar"></span>
+        </button>
 
                 <div id="main-nav" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
@@ -54,150 +53,199 @@
     <main>
         <div class="container">
             <div class="row">
-                <section id="generateContent" class="content">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <h1 class="text-center">Generate Privacy Policy</h1>
-                            <form action="" method="get">
-                                <div class="col-md-8 mx-auto">
-                                    <div class="form-group pb-3">
-                                        <label for="first">Your Company Name</label>
-                                        <input type="text" class="form-control" placeholder="" id="name" placeholder="Brand Name" />
+                <div class="col-md-6 mx-auto" id="formData">
+                    <section id="generateContent" class="content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <h1 class="text-center">Generate Privacy Policy</h1>
+                                <form action="" method="get" onsubmit="getData()">
+                                    <div class="col-md-8 mx-auto">
+                                        <div class="form-group pb-3">
+                                            <label for="first">Your Company Name</label>
+                                            <input type="text" class="form-control" placeholder="" id="name" placeholder="Brand Name" />
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="col-md-8 mx-auto">
-                                    <div class="form-group pb-3">
-                                        <label for="first">Your Website Name</label>
-                                        <input type="text" class="form-control" placeholder="" id="sitename" placeholder="Website Name" />
+                                    <div class="col-md-8 mx-auto">
+                                        <div class="form-group pb-3">
+                                            <label for="first">Your Website Name</label>
+                                            <input type="text" class="form-control" placeholder="" id="sitename" placeholder="Website Name" />
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="col-md-8 mx-auto">
-                                    <div class="form-group pb-3">
-                                        <label for="first">Your Website Url</label>
-                                        <input type="text" class="form-control" placeholder="" id="siteurl" placeholder="Website URL" />
+                                    <div class="col-md-8 mx-auto">
+                                        <div class="form-group pb-3">
+                                            <label for="first">Your Website Url</label>
+                                            <input type="text" class="form-control" placeholder="" id="siteurl" placeholder="Website URL" />
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="col-md-8 mx-auto">
-                                    <div class="form-group pb-3">
-                                        <label for="first">Your Email Address</label>
-                                        <input type="email" class="form-control" placeholder="" id="adminEmail" placeholder="Email Address" />
+                                    <div class="col-md-8 mx-auto">
+                                        <div class="form-group pb-3">
+                                            <label for="first">Your Email Address</label>
+                                            <input type="email" class="form-control" placeholder="" id="adminEmail" placeholder="Email Address" />
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="col-md-8 mx-auto mb-3 pb-2">
-                                    <label for="contact-preference">Do you use cookies on your website?</label
-                    >
-                    <div class="radio">
-                      <label>
-                        <input
-                          type="radio"
-                          name="contact-preference"
-                          id="contact-preference"
-                          value="am"
-                          checked
-                        />Yes
+                                    <div class="col-md-8 mx-auto mb-3 pb-2">
+                                        <label for="contact-preference">Do you use cookies on your website?</label>
+                                        <div class="radio">
+                                            <label>
+                        <input type="radio" name="contact-preference" id="contact-preference" value="am" checked />Yes
                       </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                        <input
-                          type="radio"
-                          name="contact-preference"
-                          id="contact-preference"
-                          value="pm"
-                        />No
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                        <input type="radio" name="contact-preference" id="contact-preference" value="pm" />No
                       </label>
-                                </div>
-                        </div>
+                                        </div>
+                                    </div>
 
-                        <div class="col-md-8 mx-auto mb-3 pb-2">
-                            <label for="contact-preference2">
+                                    <div class="col-md-8 mx-auto mb-3 pb-2">
+                                        <label for="contact-preference2">
                       Do you show advertising through Google AdSense on your
-                      website?</label
-                    >
-                    <div class="radio">
-                      <label>
-                        <input
-                          type="radio"
-                          name="contact-preference2"
-                          id="contact-preference2"
-                          value="am"
-                          checked
-                        />Yes
+                      website?</label>
+                                        <div class="radio">
+                                            <label>
+                        <input type="radio" name="contact-preference2" id="contact-preference2" value="am" checked />Yes
                       </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                        <input
-                          type="radio"
-                          name="contact-preference2"
-                          id="contact-preference2"
-                          value="pm"
-                        />No
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                        <input type="radio" name="contact-preference2" id="contact-preference2" value="pm" />No
                       </label>
-                        </div>
-                    </div>
+                                        </div>
+                                    </div>
 
-                    <div class="col-md-8 mx-auto mb-3 pb-2">
-                        <label for="contact-preference3">
+                                    <div class="col-md-8 mx-auto mb-3 pb-2">
+                                        <label for="contact-preference3">
                       Do you show advertising from third parties (except
-                      Google)?</label
-                    >
-                    <div class="radio">
-                      <label>
-                        <input
-                          type="radio"
-                          name="contact-preference3"
-                          id="contact-preference3"
-                          value="am"
-                          checked
-                        />Yes
+                      Google)?</label>
+                                        <div class="radio">
+                                            <label>
+                        <input type="radio" name="contact-preference3" id="contact-preference3" value="am" checked />Yes
                       </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                        <input
-                          type="radio"
-                          name="contact-preference3"
-                          id="contact-preference3"
-                          value="pm"
-                        />No
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                        <input type="radio" name="contact-preference3" id="contact-preference3" value="pm" />No
                       </label>
-                    </div>
-            </div>
+                                        </div>
+                                    </div>
 
-            <div class="col-md-8 mx-auto mb-3 pb-2">
-                <button type="submit" class="btn btn-primary btn-lg">
+                                    <div class="col-md-8 mx-auto mb-3 pb-2">
+                                        <button type="submit" class="btn btn-primary btn-lg">
                       Submit
                     </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-6 d-none" id="privacyText">
+                    <section class="content">
+                        <div class="card" style="height: 46rem; overflow: auto">
+                            <div class="card-body">
+                                <h1 class="card-title text-center">Privacy Policy for Texhtok</h1>
+                                <p class="card-text>
+
+
+                                    <p>At Texhtok, accessible from www.larsonbro.co, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Texhtok and how we
+                                        use it.</p>
+
+                                    <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us. Our Privacy Policy was created with the help of the <a href=" https://www.generateprivacypolicy.com ">Privacy Policy Generator</a>.</p>
+
+                                    <h2>Log Files</h2>
+
+                                    <p>Texhtok follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files
+                                        include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that
+                                        is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
+
+                                    <h2>Cookies and Web Beacons</h2>
+
+                                    <p>Like any other website, Texhtok uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used
+                                        to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+
+                                    <p>For more general information on cookies, please read <a href=" https://www.generateprivacypolicy.com/#cookies ">" Cookies " article from the Privacy Policy Generator</a>.</p>
+
+                                    <h2>Google DoubleClick DART Cookie</h2>
+
+                                    <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors
+                                        may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href=" https://policies.google.com/technologies/ads ">https://policies.google.com/technologies/ads</a></p>
+
+                                    <h2>Our Advertising Partners</h2>
+
+                                    <p>Some of advertisers on our site may use cookies and web beacons. Our advertising partners are listed below. Each of our advertising partners has their own Privacy Policy for their policies on user data. For easier access,
+                                        we hyperlinked to their Privacy Policies below.</p>
+
+                                    <ul>
+                                        <li>
+                                            <p>Google</p>
+                                            <p><a href=" https://policies.google.com/technologies/ads ">https://policies.google.com/technologies/ads</a></p>
+                                        </li>
+                                    </ul>
+
+                                    <h2>Privacy Policies</h2>
+
+                                    <P>You may consult this list to find the Privacy Policy for each of the advertising partners of Texhtok.</p>
+
+                                    <p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on Texhtok, which are sent directly to users' browser.
+                                        They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on
+                                        websites that you visit.</p>
+
+                                    <p>Note that Texhtok has no access to or control over these cookies that are used by third-party advertisers.</p>
+
+                                    <h2>Third Party Privacy Policies</h2>
+
+                                    <p>Texhtok's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include
+                                        their practices and instructions about how to opt-out of certain options. </p>
+
+                                    <p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.
+                                        What Are Cookies?</p>
+
+                                    <h2>Children's Information</h2>
+
+                                    <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+
+                                    <p>Texhtok does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to
+                                        contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+
+                                    <h2>Online Privacy Policy Only</h2>
+
+                                    <p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in Texhtok. This policy is not applicable to any information
+                                        collected offline or via channels other than this website.</p>
+
+                                    <h2>Consent</h2>
+
+                                    <p>By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.</p>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+               
             </div>
-            </form>
         </div>
-        </div>
-        </section>
-        </div>
-        </div>
-        <section id="content" class="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
+        <section id=" content " class=" content ">
+            <div class=" container ">
+                <div class=" row ">
+                    <div class=" col-md-4 ">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec elit ex. Etiam elementum lectus et tempor molestie. Pellentesque vestibulum dui sit amet dui volutpat sollicitudin. Etiam non erat finibus, iaculis nunc vel, convallis eros. Etiam efficitur
                             tempor dui, vitae fringilla ipsum tristique quis. Aliquam erat volutpat. Cras ullamcorper ex et viverra vulputate. Nam lectus ligula, pretium nec risus nec, ultricies fringilla mauris. Proin quis venenatis neque, iaculis porta
                             nulla.
                         </p>
                     </div>
-                    <div class="col-md-4">
+                    <div class=" col-md-4 ">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec elit ex. Etiam elementum lectus et tempor molestie. Pellentesque vestibulum dui sit amet dui volutpat sollicitudin. Etiam non erat finibus, iaculis nunc vel, convallis eros. Etiam efficitur
                             tempor dui, vitae fringilla ipsum tristique quis. Aliquam erat volutpat. Cras ullamcorper ex et viverra vulputate. Nam lectus ligula, pretium nec risus nec, ultricies fringilla mauris. Proin quis venenatis neque, iaculis porta
                             nulla.
                         </p>
                     </div>
-                    <div class="col-md-4">
+                    <div class=" col-md-4 ">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec elit ex. Etiam elementum lectus et tempor molestie. Pellentesque vestibulum dui sit amet dui volutpat sollicitudin. Etiam non erat finibus, iaculis nunc vel, convallis eros. Etiam efficitur
                             tempor dui, vitae fringilla ipsum tristique quis. Aliquam erat volutpat. Cras ullamcorper ex et viverra vulputate. Nam lectus ligula, pretium nec risus nec, ultricies fringilla mauris. Proin quis venenatis neque, iaculis porta
@@ -208,6 +256,21 @@
             </div>
         </section>
     </main>
+    <script>
+      let privacyText = document.getElementById('privacyText')
+      let formData = document.getElementById('formData')
+
+      function getData() {
+        let brandName = document.getElementById('name').value
+        let siteName = document.getElementById('sitename').value
+        let siteUrl = document.getElementById('siteurl').value
+        let siteEmail = document.getElementById('adminEmail').value
+
+
+        formData.classList.add('d-none')
+        privacyText.classList.remove('d-none')
+      }
+    </script>
 </body>
 
 </html>
